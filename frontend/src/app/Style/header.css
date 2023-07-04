@@ -1,0 +1,83 @@
+.HeaderLoginButton{
+  color: black;
+  background-color: #D0F59E;
+  border-radius: 100px;
+  gap: 10px;
+  padding: 7px 15px;
+}
+
+*{
+  font-size: 16px;
+  font-family: Impact,'Arial Narrow Bold', sans-serif, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.HeaderLoginButton:hover, :focus {
+  background-color: #D0F59E  !important;
+}
+
+.PagesHeaderButton:hover, .PagesHeaderButton:focus {
+  background: transparent;
+}
+
+header {
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(233, 237, 244, 0.15);
+}
+
+.AppBar{
+  display: flex  !important; 
+  padding: 10px 300px !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+.HeaderLoginButton {
+  background: #D0F59E;
+  cursor: pointer;
+}
+
+.PagesHeaderButton {
+  background: transparent;
+  cursor: pointer;
+}
+
+.HeaderLoginButton::after, .PagesHeaderButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.9s ease-in-out;
+}
+
+.HeaderLoginButton:hover::after,
+.HeaderLoginButton:focus::after,
+.PagesHeaderButton:hover::after,
+.PagesHeaderButton:focus::after {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1200px){
+  .AppBar{
+    padding: 10px 150px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .AppBar{
+    padding: 10px 70px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .AppBar{
+    padding: 10px 10px !important;
+  }
+}
